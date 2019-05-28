@@ -51,3 +51,15 @@ CREATE TABLE IF NOT EXISTS inventory (
                    CURRENT_TIMESTAMP,
   PRIMARY KEY (item_id)
 )ENGINE=InnoDB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE IF NOT EXISTS drinks (
+	drink_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    drink_type VARCHAR(20),
+    drink_name VARCHAR(30),
+    expires DATE NOT NULL,
+    number_of_units INT,
+    last_updated TIMESTAMP
+				 DEFAULT CURRENT_TIMESTAMP ON UPDATE 
+                 CURRENT_TIMESTAMP,
+	PRIMARY KEY (drink_id)
+)ENGINE=InnoDB DEFAULT CHARSET=UTF8;
